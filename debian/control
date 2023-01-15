@@ -32,18 +32,6 @@ Homepage: https://github.com/raspberrypi/libcamera-apps/
 Package: libcamera-apps
 Architecture: armhf arm64
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libcamera-apps-lite
-Replaces: libcamera-apps-lite
 Description: libcamera-apps
  Small suite of libcamera-based apps that aim to copy the functionality of the
  existing "raspicam" apps
-
-Package: libcamera-apps-lite
-Architecture: armhf arm64
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libcamera-apps
-Replaces: libcamera-apps
-Description: libcamera-apps-lite
- Small suite of libcamera-based apps that aim to copy the functionality of the
- existing "raspicam" apps. This version excludes features which require X11 and
- Qt
