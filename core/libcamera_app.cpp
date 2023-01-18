@@ -951,7 +951,7 @@ void LibcameraApp::previewThread()
 				preview_cond_var_.wait(lock);
 		}
 
-		if (item.stream->configuration().pixelFormat != libcamera::formats::YUV420)
+		if (!options_->nopreview && item.stream->configuration().pixelFormat != libcamera::formats::YUV420)
 			throw std::runtime_error("Preview windows only support YUV420");
 
 		StreamInfo info = GetStreamInfo(item.stream);
